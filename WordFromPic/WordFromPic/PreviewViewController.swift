@@ -26,8 +26,13 @@ class PreviewViewController: UIViewController {
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     dismiss(animated: true, completion: nil)
   }
+  
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+  }
+  
+  override var prefersStatusBarHidden : Bool {
+    return true
+  }
 }

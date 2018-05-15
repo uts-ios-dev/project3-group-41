@@ -84,9 +84,14 @@ class ViewController: UIViewController {
       previewVC.image = self.image
     }
   }
+  
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
+  }
+  
+  override var prefersStatusBarHidden : Bool {
+    return true
+  }
 }
 
 extension ViewController: AVCapturePhotoCaptureDelegate {
