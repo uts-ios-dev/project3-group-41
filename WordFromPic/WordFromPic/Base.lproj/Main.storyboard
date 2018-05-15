@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,120 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordFromPic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfd-3S-MMf">
+                                <rect key="frame" x="157" y="587" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="POO-eQ-aGJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="Zls-Gy-cTK"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pht-RK-X5K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rfd-3S-MMf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZS-4T-jSQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rfd-3S-MMf" secondAttribute="bottom" constant="20" id="qzb-wQ-L48"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="2TZ-Qg-VLx" kind="presentation" identifier="showPhoto" id="Tyz-Sh-P8R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="BSC-HN-2of">
+            <objects>
+                <viewController id="2TZ-Qg-VLx" customClass="PreviewViewController" customModule="WordFromPic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6L3-Uw-0eU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pbD-Nx-hS5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XR6-xx-WOd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLy-W6-MSM">
+                                        <rect key="frame" x="7" y="25" width="55" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="duq-A3-Zt1"/>
+                                            <constraint firstAttribute="width" constant="55" id="klt-xa-23n"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="2TZ-Qg-VLx" eventType="touchUpInside" id="puV-Y6-LSB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lw5-Ux-0RZ">
+                                        <rect key="frame" x="306" y="25" width="55" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="imu-0a-P8y"/>
+                                            <constraint firstAttribute="height" constant="30" id="jir-8A-KGk"/>
+                                        </constraints>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButton:" destination="2TZ-Qg-VLx" eventType="touchUpInside" id="5ge-mp-Ho2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Tvp-H2-ePU"/>
+                                    <constraint firstItem="jLy-W6-MSM" firstAttribute="leading" secondItem="XR6-xx-WOd" secondAttribute="leading" constant="7" id="f2P-De-Ubz"/>
+                                    <constraint firstItem="lw5-Ux-0RZ" firstAttribute="top" secondItem="XR6-xx-WOd" secondAttribute="top" constant="25" id="hBR-mK-cwg"/>
+                                    <constraint firstAttribute="trailing" secondItem="lw5-Ux-0RZ" secondAttribute="trailing" constant="14" id="mId-2Y-vSg"/>
+                                    <constraint firstItem="jLy-W6-MSM" firstAttribute="top" secondItem="XR6-xx-WOd" secondAttribute="top" constant="25" id="th4-sp-1td"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pbD-Nx-hS5" firstAttribute="top" secondItem="6L3-Uw-0eU" secondAttribute="top" id="9aO-ZI-YXe"/>
+                            <constraint firstItem="pbD-Nx-hS5" firstAttribute="trailing" secondItem="flE-pz-XQS" secondAttribute="trailing" id="CR6-mc-uRz"/>
+                            <constraint firstItem="XR6-xx-WOd" firstAttribute="top" secondItem="6L3-Uw-0eU" secondAttribute="top" id="EaE-73-QVf"/>
+                            <constraint firstItem="pbD-Nx-hS5" firstAttribute="bottom" secondItem="flE-pz-XQS" secondAttribute="bottom" id="cCG-Bc-QcH"/>
+                            <constraint firstItem="pbD-Nx-hS5" firstAttribute="leading" secondItem="flE-pz-XQS" secondAttribute="leading" id="dUA-yo-IwV"/>
+                            <constraint firstItem="XR6-xx-WOd" firstAttribute="trailing" secondItem="flE-pz-XQS" secondAttribute="trailing" id="iK0-By-cbv"/>
+                            <constraint firstItem="XR6-xx-WOd" firstAttribute="leading" secondItem="flE-pz-XQS" secondAttribute="leading" id="mGQ-TT-5D8"/>
+                            <constraint firstItem="XR6-xx-WOd" firstAttribute="top" secondItem="6L3-Uw-0eU" secondAttribute="top" id="tpx-Cz-Tzi"/>
+                            <constraint firstItem="XR6-xx-WOd" firstAttribute="leading" secondItem="flE-pz-XQS" secondAttribute="leading" id="zV3-W9-HPd"/>
+                            <constraint firstItem="XR6-xx-WOd" firstAttribute="trailing" secondItem="flE-pz-XQS" secondAttribute="trailing" id="zch-LT-uVv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="flE-pz-XQS"/>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="pbD-Nx-hS5" id="JCs-Cx-wAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ApE-0E-0Zs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509.5999999999999" y="60.719640179910051"/>
         </scene>
     </scenes>
 </document>
