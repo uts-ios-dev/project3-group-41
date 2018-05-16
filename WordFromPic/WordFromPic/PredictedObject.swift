@@ -11,22 +11,18 @@ class PredictedObject {
     
     var resizedPixelBuffer: CVPixelBuffer?
     var utterance: AVSpeechUtterance? = nil
+    var image: UIImage? = nil
     var name: String? = nil
-    
-    init() {
+
+    init(image: UIImage) {
         setUpCoreImage()
-    }
-    
-    convenience init(image: UIImage) {
         if let pixelBuffer = image.pixelBuffer(width: PredictedObject.inputWidth, height: PredictedObject.inputHeight) {
-            self.init(pixelBuffer: pixelBuffer)
-        } else {
-            self.init()
+            self.predict(pixelBuffer: pixelBuffer)
         }
+        self.image = image
     }
     
-    convenience init(pixelBuffer: CVPixelBuffer) {
-        self.init()
+    func predict(pixelBuffer: CVPixelBuffer) {
         guard let resizedPixelBuffer = resizedPixelBuffer else {
             return
         }
