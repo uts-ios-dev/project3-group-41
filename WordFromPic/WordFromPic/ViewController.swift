@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupCaptureSession()
         setupDevice()
+        setFPS()
         setupInputOutput()
         setupPreviewLayer()
         startRunningCaptureSession()
@@ -69,6 +70,25 @@ class ViewController: UIViewController {
   
   func startRunningCaptureSession() {
     captureSession.startRunning()
+  }
+  
+  func setFPS() {
+    captureSession = AVCaptureSession()
+    for vFormat in backCamera!.formats {
+      var ranges = vFormat.videoSupportedFrameRateRanges as [AVFrameRateRange]
+      let frameRates = ranges[0]
+      if frameRates.maxFrameRate > 30 {
+        do {
+          try backCamera!.lockForConfiguration()
+          backCamera!.activeFormat = vFormat
+          backCamera!.activeVideoMinFrameDuration = CMTimeMake(1, 60)
+          backCamera!.activeVideoMaxFrameDuration = CMTimeMake(1, 60)
+          backCamera!.unlockForConfiguration()
+        } catch {
+          print("Error on frame rate")
+        }
+      }
+    }
   }
   
   @IBAction func cameraButton(_ sender: Any) {
