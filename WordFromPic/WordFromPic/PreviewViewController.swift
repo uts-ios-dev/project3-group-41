@@ -1,21 +1,16 @@
-//
-//  PreviewViewController.swift
-//  WordFromPic
-//
-//  Created by Tyler Tran  on 15/5/18.
-//  Copyright © 2018 Huy Lê. All rights reserved.
-//
-
 import UIKit
 
 class PreviewViewController: UIViewController {
   var image: UIImage!
-  
+  @IBOutlet weak var objectName: UILabel!
   @IBOutlet weak var photo: UIImageView!
+  var predictedObject: PredictedObject? = nil
+  
   override func viewDidLoad() {
       super.viewDidLoad()
-      photo.image = self.image
+      photo.image = predictedObject?.image
       // Do any additional setup after loading the view.
+      objectName.text = predictedObject?.name
   }
 
   @IBAction func cancelButton(_ sender: Any) {
@@ -32,6 +27,9 @@ class PreviewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
   }
   
+  @IBAction func soundAction(_ sender: UIButton) {
+    predictedObject?.speak()
+  }
   override var prefersStatusBarHidden : Bool {
     return true
   }

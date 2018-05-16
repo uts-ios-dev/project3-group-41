@@ -38,7 +38,7 @@ class PredictedObject {
             name = prediction.classLabel
             utterance = AVSpeechUtterance(string: name!)
             utterance?.voice = AVSpeechSynthesisVoice(language: "en-AU")
-            utterance?.rate = 0.2
+            utterance?.rate = 0.5
             
             print(name!)
         } catch let error {
