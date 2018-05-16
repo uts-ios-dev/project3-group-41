@@ -1,10 +1,18 @@
 import Foundation
 import UIKit
+import AVFoundation
+
+var a : [String: String] = [
+    "a": "ascdas"
+]
 
 class PredictedObject {
-    var resizedPixelBuffer: CVPixelBuffer?
     static let ciContext = CIContext()
     static let yolo = YOLO()
+    static let synthesizer = AVSpeechSynthesizer()
+    
+    var resizedPixelBuffer: CVPixelBuffer?
+    var utterance: AVSpeechUtterance? = nil
     var name: String? = nil
     var position: CGRect? = nil
     
@@ -12,22 +20,16 @@ class PredictedObject {
         setUpCoreImage()
     }
     
-    func setUpCoreImage() {
-        let status = CVPixelBufferCreate(nil, YOLO.inputWidth, YOLO.inputHeight,
-                                         kCVPixelFormatType_32BGRA, nil,
-                                         &resizedPixelBuffer)
-        if status != kCVReturnSuccess {
-            print("Error: could not create resized pixel buffer", status)
-        }
-    }
-    
-    func predict(image: UIImage) {
+    convenience init(image: UIImage) {
         if let pixelBuffer = image.pixelBuffer(width: YOLO.inputWidth, height: YOLO.inputHeight) {
-            predict(pixelBuffer: pixelBuffer)
+            self.init(pixelBuffer: pixelBuffer)
+        } else {
+            self.init()
         }
     }
     
-    func predict(pixelBuffer: CVPixelBuffer) {
+    convenience init(pixelBuffer: CVPixelBuffer) {
+        self.init()
         guard let resizedPixelBuffer = resizedPixelBuffer else {
             return
         }
@@ -42,10 +44,22 @@ class PredictedObject {
             let boundingBox = selectMaxBox(boundingBoxes)
             
             name = labels[(boundingBox?.classIndex)!]
+            utterance = AVSpeechUtterance(string: name!)
+            utterance?.voice = AVSpeechSynthesisVoice(language: "en-AU")
+            utterance?.rate = 0.2
             position = boundingBox?.rect
             
             print(name!)
             print(position!)
+        }
+    }
+    
+    func setUpCoreImage() {
+        let status = CVPixelBufferCreate(nil, YOLO.inputWidth, YOLO.inputHeight,
+                                         kCVPixelFormatType_32BGRA, nil,
+                                         &resizedPixelBuffer)
+        if status != kCVReturnSuccess {
+            print("Error: could not create resized pixel buffer", status)
         }
     }
     
@@ -59,6 +73,10 @@ class PredictedObject {
         }
         
         return result
+    }
+    
+    func speak() {
+        PredictedObject.synthesizer.speak(utterance!)
     }
 }
 
