@@ -22,7 +22,6 @@ class ViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         setupCaptureSession()
         setupDevice()
         setupInputOutput()
@@ -81,7 +80,7 @@ class ViewController: UIViewController {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showPhoto" {
       let previewVC = segue.destination as! PreviewViewController
-      previewVC.image = self.image
+      previewVC.predictedObject = PredictedObject(image: image!)
     }
   }
   

@@ -15,6 +15,10 @@
 		20C30D3A20AA70D30018C2E8 /* WordFromPicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D3920AA70D30018C2E8 /* WordFromPicTests.swift */; };
 		20C30D4520AA70D30018C2E8 /* WordFromPicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */; };
 		2F36364720AAA764003219AA /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36364620AAA764003219AA /* PreviewViewController.swift */; };
+		2F36365D20AC0BD0003219AA /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2F36365C20AC0BD0003219AA /* TinyYOLO.mlmodel */; };
+		2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */; };
+		2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366020AC0BDE003219AA /* PredictedObject.swift */; };
+		2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFromPicUITests.swift; sourceTree = "<group>"; };
 		20C30D4620AA70D30018C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F36364620AAA764003219AA /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		2F36365C20AC0BD0003219AA /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
+		2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		2F36366020AC0BDE003219AA /* PredictedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictedObject.swift; sourceTree = "<group>"; };
+		2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +111,12 @@
 				20C30D2620AA70D10018C2E8 /* ViewController.swift */,
 				2F36364620AAA764003219AA /* PreviewViewController.swift */,
 				20C30D2820AA70D10018C2E8 /* Main.storyboard */,
-				20C30D2B20AA70D20018C2E8 /* Assets.xcassets */,
 				20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */,
+				2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */,
+				2F36366020AC0BDE003219AA /* PredictedObject.swift */,
+				2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */,
+				2F36365C20AC0BD0003219AA /* TinyYOLO.mlmodel */,
+				20C30D2B20AA70D20018C2E8 /* Assets.xcassets */,
 				20C30D3020AA70D20018C2E8 /* Info.plist */,
 			);
 			path = WordFromPic;
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */,
+				2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */,
 				20C30D2720AA70D10018C2E8 /* ViewController.swift in Sources */,
 				20C30D2520AA70D10018C2E8 /* AppDelegate.swift in Sources */,
+				2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */,
 				2F36364720AAA764003219AA /* PreviewViewController.swift in Sources */,
+				2F36365D20AC0BD0003219AA /* TinyYOLO.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
