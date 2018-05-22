@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  WordFromPic
-//
-//  Created by Huy Lê on 15/5/18.
-//  Copyright © 2018 Huy Lê. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -14,24 +6,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-  var orientationLock = UIInterfaceOrientationMask.portrait
-  
-  func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-    return self.orientationLock
-  }
-  
-  struct AppUtility {
-    static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
-      if let delegate = UIApplication.shared.delegate as? AppDelegate {
-        delegate.orientationLock = orientation
-      }
+    var orientationLock = UIInterfaceOrientationMask.portrait
+
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return self.orientationLock
     }
-    
-    static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
-      self.lockOrientation(orientation)
-      UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+
+    struct AppUtility {
+        static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+            if let delegate = UIApplication.shared.delegate as? AppDelegate {
+                delegate.orientationLock = orientation
+            }
+        }
+
+        static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+            self.lockOrientation(orientation)
+            UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        }
     }
-  }
   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -62,4 +54,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
