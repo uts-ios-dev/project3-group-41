@@ -29,7 +29,11 @@ class ViewController: UIViewController {
         setupPreviewLayer()
         startRunningCaptureSession()
     }
-
+  
+  override func viewWillAppear(_ animated: Bool) {
+    AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+  }
+  
   func setupCaptureSession() {
     captureSession.sessionPreset = AVCaptureSession.Preset.photo
   }
