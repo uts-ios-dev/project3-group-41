@@ -18,13 +18,13 @@ class PreviewViewController: UIViewController {
     }
 
     @IBAction func saveButton(_ sender: Any) {
+        SavedObject.appendData((predictedObject?.name)!, (predictedObject?.image)!)
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func soundAction(_ sender: UIButton) {

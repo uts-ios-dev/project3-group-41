@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import AVFoundation
 
+// Model to predict the name of the object from image
 class PredictedObject {
     static let ciContext = CIContext()
     static let inceptionv3model = Inceptionv3()
@@ -15,37 +16,46 @@ class PredictedObject {
     var name: String? = nil
 
     init(image: UIImage) {
+        self.image = image
+        
+        // Convert image into CVPixelBuffer
         setUpCoreImage()
         if let pixelBuffer = image.pixelBuffer(width: PredictedObject.inputWidth, height: PredictedObject.inputHeight) {
             self.predict(pixelBuffer: pixelBuffer)
         }
-        self.image = image
     }
     
     func predict(pixelBuffer: CVPixelBuffer) {
+        // Check the resizedPixelBuffer is set up
         guard let resizedPixelBuffer = resizedPixelBuffer else {
             return
         }
+        
         let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
+        
+        // Prepare tranformer for image scaling
         let sx = CGFloat(PredictedObject.inputWidth) / CGFloat(CVPixelBufferGetWidth(pixelBuffer))
         let sy = CGFloat(PredictedObject.inputHeight) / CGFloat(CVPixelBufferGetHeight(pixelBuffer))
         let scaleTransform = CGAffineTransform(scaleX: sx, y: sy)
+        
+        // Scale image to predefined model input size
         let scaledImage = ciImage.transformed(by: scaleTransform)
         PredictedObject.ciContext.render(scaledImage, to: resizedPixelBuffer)
         
         do {
             let prediction = try PredictedObject.inceptionv3model.prediction(image: resizedPixelBuffer)
             name = prediction.classLabel
-            utterance = AVSpeechUtterance(string: name!)
-            utterance?.voice = AVSpeechSynthesisVoice(language: "en-AU")
-            utterance?.rate = 0.5
-            
-            print(name!)
         } catch let error {
             fatalError("Unexpected error ocurred when predicting: \(error.localizedDescription).")
         }
+        
+        // Set up speech for object name
+        utterance = AVSpeechUtterance(string: name!)
+        utterance?.voice = AVSpeechSynthesisVoice(language: "en-AU")
+        utterance?.rate = 0.5
     }
     
+    // Set up resizedPixelBuffer for image predicttion
     func setUpCoreImage() {
         let status = CVPixelBufferCreate(nil, PredictedObject.inputWidth, PredictedObject.inputHeight,
                                          kCVPixelFormatType_32BGRA, nil,
