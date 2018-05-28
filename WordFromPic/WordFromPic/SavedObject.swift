@@ -1,26 +1,24 @@
 import Foundation
 import UIKit
 
-struct ImageObject {
-    let name: String
-    let image: UIImage
-
-    static func getSavedObject(_ data: ImageObject) -> SavedObject {
-        return SavedObject(imageName: SavedObject.saveImage(image: data.image), name: data.name)
-    }
-}
-
+// Structure to store data in hard disk
 struct SavedObject: Codable {
     static let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("todos").appendingPathExtension("plist")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("saveobject").appendingPathExtension("plist")
     
     let imageName: String
     let name: String
 
+    // Load data from hard disk
     static func loadData() -> [SavedObject]?  {
         guard let codedData = try? Data(contentsOf: ArchiveURL) else {return nil}
         let propertyListDecoder = PropertyListDecoder()
         return try? propertyListDecoder.decode(Array<SavedObject>.self, from: codedData)
+    }
+    
+    // Add data to hard disk
+    static func appendData(_ name: String, _ image: UIImage) {
+        appendData(SavedObject(imageName: saveImage(image: image), name: name))
     }
     
     static func appendData(_ data: SavedObject) {
@@ -35,6 +33,7 @@ struct SavedObject: Codable {
         SavedObject.saveData(savedObjects)
     }
     
+    // Save data to hard disk
     static func saveData(_ data: [SavedObject]) {
         let propertyListEncoder = PropertyListEncoder()
         let codedData = try? propertyListEncoder.encode(data)

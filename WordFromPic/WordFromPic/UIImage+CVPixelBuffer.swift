@@ -13,7 +13,7 @@ extension UIImage {
                                      &maybePixelBuffer)
 
     guard status == kCVReturnSuccess, let pixelBuffer = maybePixelBuffer else {
-      return nil
+        return nil
     }
 
     CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
