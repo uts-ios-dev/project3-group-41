@@ -23,8 +23,13 @@ class QuizViewController: UIViewController {
     
     func updateUI() {
 		navigationItem.title = "Quiz \(quizIndex + 1)"
-		navigationItem.setRightBarButtonItems(nil, animated: true)
 		
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(QuizViewController.cancelButtonClicked(_:)))
+        navigationItem.leftBarButtonItems = [cancelButton]
+        
+        navigationItem.setRightBarButtonItems(nil, animated: true)
+		
+        
         let currentQuiz = quizs![quizIndex]
 		let currentAnswers = currentQuiz.choices
 		
@@ -38,6 +43,12 @@ class QuizViewController: UIViewController {
         }
 	}
 	
+    //Move back to the main screen
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        performSegue(withIdentifier: "MainSegue", sender: nil)
+    }
+    
+    
 	// Move to the next quiz
 	@IBAction func nextButtonClicked(_ sender: Any) {
         quizIndex += 1
@@ -65,8 +76,8 @@ class QuizViewController: UIViewController {
             }
         }
         
-        let rightButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(QuizViewController.nextButtonClicked(_:)))
-        navigationItem.rightBarButtonItems = [rightButton]
+        let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(QuizViewController.nextButtonClicked(_:)))
+        navigationItem.rightBarButtonItems = [nextButton]
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,6 +85,10 @@ class QuizViewController: UIViewController {
             let resultViewController = segue.destination as! ResultViewController
             resultViewController.result = totalScore
             resultViewController.maxScore = quizs!.count
+        }
+        
+        if segue.identifier == "MainSegue" {
+            _ = segue.destination as! MainViewController
         }
     }
 
