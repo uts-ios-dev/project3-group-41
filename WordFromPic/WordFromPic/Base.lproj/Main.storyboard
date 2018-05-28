@@ -238,7 +238,7 @@
                                     <action selector="saveButton:" destination="Yhs-ad-Rmf" eventType="touchUpInside" id="AS2-wa-xEO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TU0-nE-pFB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TU0-nE-pFB">
                                 <rect key="frame" x="0.0" y="58" width="375" height="551"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ri-3g-70y">
@@ -285,6 +285,7 @@
                     <connections>
                         <outlet property="objectName" destination="9ri-3g-70y" id="WkC-ic-S3m"/>
                         <outlet property="photo" destination="TU0-nE-pFB" id="uHe-jC-Knw"/>
+                        <outlet property="soundButton" destination="AK3-VU-j6M" id="6hi-w6-ped"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yag-XU-Jzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
