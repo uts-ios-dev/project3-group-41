@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedObjects" representedClassName="SavedObjects" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
+        <attribute name="object" optional="YES" attributeType="Transformable" customClassName="[UIImage]" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SavedObjects" positionX="-54" positionY="-9" width="128" height="75"/>
+    </elements>
+</model>

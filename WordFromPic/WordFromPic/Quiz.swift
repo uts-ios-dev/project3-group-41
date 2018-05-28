@@ -6,13 +6,17 @@ class Quiz {
     private static let defaultQuiz: Quiz = Quiz(choices: ["cup", "car", "bottle", "people"], image: UIImage(named: "sample")!, rightAnswer: 0)
     
     // number of choices in each quizs
-    private static let numberOfChoices: Int = 4
+    static var numberOfChoices: Int {
+        return 4
+    }
     
     // maximum number of quizes in each run
     private static let maxNumberOfQuiz: Int = 4
     
     // question for all of the quiz
-    private static let question: String = "What is this?"
+    static var question: String {
+        return "What is this?"
+    }
     
     let choices: [String]   // Array of answers woth length equal to numberOfChoices
     let rightAnswer: Int    // The index of right answer in choices
