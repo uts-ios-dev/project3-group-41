@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		20C30D2520AA70D10018C2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D2420AA70D10018C2E8 /* AppDelegate.swift */; };
-		20C30D2720AA70D10018C2E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D2620AA70D10018C2E8 /* ViewController.swift */; };
 		20C30D2A20AA70D10018C2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C30D2820AA70D10018C2E8 /* Main.storyboard */; };
 		20C30D2C20AA70D20018C2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C30D2B20AA70D20018C2E8 /* Assets.xcassets */; };
 		20C30D2F20AA70D20018C2E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */; };
 		20C30D3A20AA70D30018C2E8 /* WordFromPicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D3920AA70D30018C2E8 /* WordFromPicTests.swift */; };
 		20C30D4520AA70D30018C2E8 /* WordFromPicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */; };
 		2F36364720AAA764003219AA /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36364620AAA764003219AA /* PreviewViewController.swift */; };
-		2F36365D20AC0BD0003219AA /* TinyYOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2F36365C20AC0BD0003219AA /* TinyYOLO.mlmodel */; };
 		2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */; };
 		2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366020AC0BDE003219AA /* PredictedObject.swift */; };
 		2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */; };
+		B2B4469220BBE582004A2B63 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468D20BBE581004A2B63 /* Quiz.swift */; };
+		B2B4469320BBE582004A2B63 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468E20BBE581004A2B63 /* ResultViewController.swift */; };
+		B2B4469420BBE582004A2B63 /* SavedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468F20BBE581004A2B63 /* SavedObject.swift */; };
+		B2B4469520BBE582004A2B63 /* Sequence+shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */; };
+		B2B4469620BBE582004A2B63 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4469120BBE581004A2B63 /* QuizViewController.swift */; };
+		B2B4469820BBE58B004A2B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4469720BBE58B004A2B63 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +45,6 @@
 /* Begin PBXFileReference section */
 		20C30D2120AA70D10018C2E8 /* WordFromPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFromPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C30D2420AA70D10018C2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20C30D2620AA70D10018C2E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20C30D2920AA70D10018C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20C30D2B20AA70D20018C2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20C30D2E20AA70D20018C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,10 +56,15 @@
 		20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFromPicUITests.swift; sourceTree = "<group>"; };
 		20C30D4620AA70D30018C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F36364620AAA764003219AA /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		2F36365C20AC0BD0003219AA /* TinyYOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TinyYOLO.mlmodel; sourceTree = "<group>"; };
 		2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		2F36366020AC0BDE003219AA /* PredictedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictedObject.swift; sourceTree = "<group>"; };
 		2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		B2B4468D20BBE581004A2B63 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		B2B4468E20BBE581004A2B63 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B2B4468F20BBE581004A2B63 /* SavedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedObject.swift; sourceTree = "<group>"; };
+		B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+shuffle.swift"; sourceTree = "<group>"; };
+		B2B4469120BBE581004A2B63 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		B2B4469720BBE58B004A2B63 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +116,18 @@
 			isa = PBXGroup;
 			children = (
 				20C30D2420AA70D10018C2E8 /* AppDelegate.swift */,
-				20C30D2620AA70D10018C2E8 /* ViewController.swift */,
 				2F36364620AAA764003219AA /* PreviewViewController.swift */,
 				20C30D2820AA70D10018C2E8 /* Main.storyboard */,
 				20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */,
 				2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */,
+				B2B4468D20BBE581004A2B63 /* Quiz.swift */,
+				B2B4469120BBE581004A2B63 /* QuizViewController.swift */,
+				B2B4468E20BBE581004A2B63 /* ResultViewController.swift */,
+				B2B4469720BBE58B004A2B63 /* MainViewController.swift */,
+				B2B4468F20BBE581004A2B63 /* SavedObject.swift */,
+				B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */,
 				2F36366020AC0BDE003219AA /* PredictedObject.swift */,
 				2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */,
-				2F36365C20AC0BD0003219AA /* TinyYOLO.mlmodel */,
 				20C30D2B20AA70D20018C2E8 /* Assets.xcassets */,
 				20C30D3020AA70D20018C2E8 /* Info.plist */,
 			);
@@ -272,12 +284,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */,
+				B2B4469820BBE58B004A2B63 /* MainViewController.swift in Sources */,
+				B2B4469620BBE582004A2B63 /* QuizViewController.swift in Sources */,
 				2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */,
-				20C30D2720AA70D10018C2E8 /* ViewController.swift in Sources */,
+				B2B4469320BBE582004A2B63 /* ResultViewController.swift in Sources */,
+				B2B4469520BBE582004A2B63 /* Sequence+shuffle.swift in Sources */,
+				B2B4469220BBE582004A2B63 /* Quiz.swift in Sources */,
 				20C30D2520AA70D10018C2E8 /* AppDelegate.swift in Sources */,
 				2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */,
+				B2B4469420BBE582004A2B63 /* SavedObject.swift in Sources */,
 				2F36364720AAA764003219AA /* PreviewViewController.swift in Sources */,
-				2F36365D20AC0BD0003219AA /* TinyYOLO.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
