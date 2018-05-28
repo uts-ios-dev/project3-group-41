@@ -18,8 +18,8 @@ class PreviewViewController: UIViewController {
     }
 
     @IBAction func saveButton(_ sender: Any) {
-        SavedObject.appendData((predictedObject?.name)!, (predictedObject?.image)!)
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    SavedObject.appendData((predictedObject?.name)!, (predictedObject?.image)!)
+      UIImageWriteToSavedPhotosAlbum(photo.image!, nil, nil, nil)
         dismiss(animated: true, completion: nil)
     }
 
