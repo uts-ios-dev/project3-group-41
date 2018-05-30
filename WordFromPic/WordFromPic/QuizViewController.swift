@@ -2,11 +2,15 @@ import UIKit
 
 class QuizViewController: UIViewController {
 
+    
+    @IBOutlet weak var quizNavigationBar: UINavigationBar!
+    
     @IBOutlet weak var nextButton: UIButton!
 	
     @IBOutlet weak var quizImage: UIImageView!
     @IBOutlet weak var question: UILabel!
     @IBOutlet var answerButtons: Array<UIButton>?
+    
     
     var quizIndex: Int = 0
 	
@@ -22,14 +26,15 @@ class QuizViewController: UIViewController {
     }
     
     func updateUI() {
-		navigationItem.title = "Quiz \(quizIndex + 1)"
-		
+        navigationItem.title = "Quiz \(quizIndex + 1)"
+
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(QuizViewController.cancelButtonClicked(_:)))
-        navigationItem.leftBarButtonItems = [cancelButton]
+        navigationItem.leftBarButtonItem = cancelButton
         
         navigationItem.setRightBarButtonItems(nil, animated: true)
-		
         
+        quizNavigationBar.items = [navigationItem]
+
         let currentQuiz = quizs![quizIndex]
 		let currentAnswers = currentQuiz.choices
 		
@@ -45,9 +50,8 @@ class QuizViewController: UIViewController {
 	
     //Move back to the main screen
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        performSegue(withIdentifier: "MainSegue", sender: nil)
+        dismiss(animated: true, completion: nil)
     }
-    
     
 	// Move to the next quiz
 	@IBAction func nextButtonClicked(_ sender: Any) {
@@ -56,7 +60,9 @@ class QuizViewController: UIViewController {
             updateUI()
         } else {
             performSegue(withIdentifier: "ResultSegue", sender: nil)
+            updateUI()
         }
+        
 	}
 	
     @IBAction func answerClicked(_ sender: UIButton?) {
@@ -86,12 +92,10 @@ class QuizViewController: UIViewController {
             resultViewController.result = totalScore
             resultViewController.maxScore = quizs!.count
         }
-        
-        if segue.identifier == "MainSegue" {
-            _ = segue.destination as! MainViewController
-        }
     }
 
+    @IBAction func unwindToQuizVC(segue: UIStoryboardSegue) { }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
