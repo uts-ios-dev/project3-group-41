@@ -2,7 +2,6 @@ import UIKit
 
 class QuizViewController: UIViewController {
 
-    
     @IBOutlet weak var quizNavigationBar: UINavigationBar!
     
     @IBOutlet weak var nextButton: UIButton!
@@ -11,12 +10,12 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet var answerButtons: Array<UIButton>?
     
-    
     var quizIndex: Int = 0
 	
-	var quizs: [Quiz]?
-	
     var totalScore: Int = 0
+    
+	var quizs: [Quiz]?
+    var answerCharacters: [String] = ["A", "B", "C", "D"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +40,7 @@ class QuizViewController: UIViewController {
 		quizImage.image = currentQuiz.image
 		
         for (i, answerButton) in answerButtons!.enumerated() {
-            answerButton.setTitle("\(i + 1). \(currentAnswers[i])", for: .normal)
+            answerButton.setTitle("\(answerCharacters[i]). \(currentAnswers[i])", for: .normal)
             answerButton.tintColor = UIColor.blue
             answerButton.isUserInteractionEnabled = true
             answerButton.addTarget(self, action: #selector(QuizViewController.answerClicked(_:)), for: .touchUpInside)
@@ -50,7 +49,7 @@ class QuizViewController: UIViewController {
 	
     //Move back to the main screen
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "unwindToMainVC", sender: self)
     }
     
 	// Move to the next quiz
@@ -59,8 +58,7 @@ class QuizViewController: UIViewController {
         if quizIndex < quizs!.count {
             updateUI()
         } else {
-            performSegue(withIdentifier: "ResultSegue", sender: nil)
-            updateUI()
+            performSegue(withIdentifier: "ResultSegue", sender: self)
         }
         
 	}
@@ -83,7 +81,7 @@ class QuizViewController: UIViewController {
         }
         
         let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(QuizViewController.nextButtonClicked(_:)))
-        navigationItem.rightBarButtonItems = [nextButton]
+        navigationItem.rightBarButtonItem = nextButton
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,6 +89,8 @@ class QuizViewController: UIViewController {
             let resultViewController = segue.destination as! ResultViewController
             resultViewController.result = totalScore
             resultViewController.maxScore = quizs!.count
+            quizIndex = 0
+            totalScore = 0
         }
     }
 

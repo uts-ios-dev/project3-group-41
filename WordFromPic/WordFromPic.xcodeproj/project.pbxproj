@@ -17,6 +17,7 @@
 		2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */; };
 		2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366020AC0BDE003219AA /* PredictedObject.swift */; };
 		2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */; };
+		B2B2089520C005CC0045E287 /* quizIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B2B2089420C005CC0045E287 /* quizIcon.png */; };
 		B2B4469220BBE582004A2B63 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468D20BBE581004A2B63 /* Quiz.swift */; };
 		B2B4469320BBE582004A2B63 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468E20BBE581004A2B63 /* ResultViewController.swift */; };
 		B2B4469420BBE582004A2B63 /* SavedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468F20BBE581004A2B63 /* SavedObject.swift */; };
@@ -46,7 +47,7 @@
 		20C30D2120AA70D10018C2E8 /* WordFromPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFromPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C30D2420AA70D10018C2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20C30D2920AA70D10018C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		20C30D2B20AA70D20018C2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20C30D2B20AA70D20018C2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../../../Downloads/Document/UTS/Autumn 2018/iOS Programming/Assignment 3/WordFromPic/WordFromPic/Assets.xcassets"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20C30D2E20AA70D20018C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20C30D3020AA70D20018C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C30D3520AA70D30018C2E8 /* WordFromPicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordFromPicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +60,7 @@
 		2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		2F36366020AC0BDE003219AA /* PredictedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictedObject.swift; sourceTree = "<group>"; };
 		2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		B2B2089420C005CC0045E287 /* quizIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quizIcon.png; path = ../../quizIcon.png; sourceTree = "<group>"; };
 		B2B4468D20BBE581004A2B63 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		B2B4468E20BBE581004A2B63 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		B2B4468F20BBE581004A2B63 /* SavedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedObject.swift; sourceTree = "<group>"; };
@@ -116,19 +118,20 @@
 			isa = PBXGroup;
 			children = (
 				20C30D2420AA70D10018C2E8 /* AppDelegate.swift */,
-				2F36364620AAA764003219AA /* PreviewViewController.swift */,
 				20C30D2820AA70D10018C2E8 /* Main.storyboard */,
 				20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */,
-				2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */,
-				B2B4468D20BBE581004A2B63 /* Quiz.swift */,
+				B2B4469720BBE58B004A2B63 /* MainViewController.swift */,
+				2F36364620AAA764003219AA /* PreviewViewController.swift */,
 				B2B4469120BBE581004A2B63 /* QuizViewController.swift */,
 				B2B4468E20BBE581004A2B63 /* ResultViewController.swift */,
-				B2B4469720BBE58B004A2B63 /* MainViewController.swift */,
 				B2B4468F20BBE581004A2B63 /* SavedObject.swift */,
 				B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */,
+				2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */,
+				B2B4468D20BBE581004A2B63 /* Quiz.swift */,
 				2F36366020AC0BDE003219AA /* PredictedObject.swift */,
 				2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */,
 				20C30D2B20AA70D20018C2E8 /* Assets.xcassets */,
+				B2B2089420C005CC0045E287 /* quizIcon.png */,
 				20C30D3020AA70D20018C2E8 /* Info.plist */,
 			);
 			path = WordFromPic;
@@ -216,7 +219,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Huy Lê";
+				ORGANIZATIONNAME = "Huy Lê and Thịnh Nguyễn";
 				TargetAttributes = {
 					20C30D2020AA70D10018C2E8 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C30D2F20AA70D20018C2E8 /* LaunchScreen.storyboard in Resources */,
+				B2B2089520C005CC0045E287 /* quizIcon.png in Resources */,
 				20C30D2C20AA70D20018C2E8 /* Assets.xcassets in Resources */,
 				20C30D2A20AA70D10018C2E8 /* Main.storyboard in Resources */,
 			);
@@ -467,13 +471,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5AG7BZR29U;
+				DEVELOPMENT_TEAM = MX4UQZ587P;
 				INFOPLIST_FILE = WordFromPic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Group41.WordFromPic;
+				PRODUCT_BUNDLE_IDENTIFIER = Group41.WordFromPic.sger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,13 +490,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5AG7BZR29U;
+				DEVELOPMENT_TEAM = MX4UQZ587P;
 				INFOPLIST_FILE = WordFromPic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Group41.WordFromPic;
+				PRODUCT_BUNDLE_IDENTIFIER = Group41.WordFromPic.sger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,7 +510,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NA6NBMDED8;
+				DEVELOPMENT_TEAM = MX4UQZ587P;
 				INFOPLIST_FILE = WordFromPicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,7 +531,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NA6NBMDED8;
+				DEVELOPMENT_TEAM = MX4UQZ587P;
 				INFOPLIST_FILE = WordFromPicTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -545,7 +551,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NA6NBMDED8;
+				DEVELOPMENT_TEAM = MX4UQZ587P;
 				INFOPLIST_FILE = WordFromPicUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -565,7 +571,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NA6NBMDED8;
+				DEVELOPMENT_TEAM = MX4UQZ587P;
 				INFOPLIST_FILE = WordFromPicUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
