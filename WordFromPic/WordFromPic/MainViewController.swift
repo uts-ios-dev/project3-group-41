@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         setupInputOutput()
         setupPreviewLayer()
         startRunningCaptureSession()
+        navigationController?.isNavigationBarHidden = true
     }
   
     func setupCaptureSession() {
@@ -134,6 +135,9 @@ class MainViewController: UIViewController {
     // Don't forget to reset when view is being removed
     AppUtility.lockOrientation(.all)
   }
+    
+    @IBAction func unwindToMainVC(segue: UIStoryboardSegue) { }
+    
 }
 
 extension MainViewController: AVCapturePhotoCaptureDelegate {

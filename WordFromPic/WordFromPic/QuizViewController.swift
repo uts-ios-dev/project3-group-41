@@ -2,6 +2,8 @@ import UIKit
 
 class QuizViewController: UIViewController {
 
+    @IBOutlet weak var quizNavigationBar: UINavigationBar!
+    
     @IBOutlet weak var nextButton: UIButton!
 	
     @IBOutlet weak var quizImage: UIImageView!
@@ -10,9 +12,10 @@ class QuizViewController: UIViewController {
     
     var quizIndex: Int = 0
 	
-	var quizs: [Quiz]?
-	
     var totalScore: Int = 0
+    
+	var quizs: [Quiz]?
+    var answerCharacters: [String] = ["A", "B", "C", "D"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +25,22 @@ class QuizViewController: UIViewController {
     }
     
     func updateUI() {
-		navigationItem.title = "Quiz \(quizIndex + 1)"
-		
+        navigationItem.title = "Quiz \(quizIndex + 1)"
+
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(QuizViewController.cancelButtonClicked(_:)))
-        navigationItem.leftBarButtonItems = [cancelButton]
+        navigationItem.leftBarButtonItem = cancelButton
         
         navigationItem.setRightBarButtonItems(nil, animated: true)
-		
         
+        quizNavigationBar.items = [navigationItem]
+
         let currentQuiz = quizs![quizIndex]
 		let currentAnswers = currentQuiz.choices
 		
 		quizImage.image = currentQuiz.image
 		
         for (i, answerButton) in answerButtons!.enumerated() {
-            answerButton.setTitle("\(i + 1). \(currentAnswers[i])", for: .normal)
+            answerButton.setTitle("\(answerCharacters[i]). \(currentAnswers[i])", for: .normal)
             answerButton.tintColor = UIColor.blue
             answerButton.isUserInteractionEnabled = true
             answerButton.addTarget(self, action: #selector(QuizViewController.answerClicked(_:)), for: .touchUpInside)
@@ -45,9 +49,8 @@ class QuizViewController: UIViewController {
 	
     //Move back to the main screen
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        performSegue(withIdentifier: "MainSegue", sender: nil)
+        performSegue(withIdentifier: "unwindToMainVC", sender: self)
     }
-    
     
 	// Move to the next quiz
 	@IBAction func nextButtonClicked(_ sender: Any) {
@@ -55,8 +58,9 @@ class QuizViewController: UIViewController {
         if quizIndex < quizs!.count {
             updateUI()
         } else {
-            performSegue(withIdentifier: "ResultSegue", sender: nil)
+            performSegue(withIdentifier: "ResultSegue", sender: self)
         }
+        
 	}
 	
     @IBAction func answerClicked(_ sender: UIButton?) {
@@ -77,7 +81,7 @@ class QuizViewController: UIViewController {
         }
         
         let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(QuizViewController.nextButtonClicked(_:)))
-        navigationItem.rightBarButtonItems = [nextButton]
+        navigationItem.rightBarButtonItem = nextButton
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -85,13 +89,13 @@ class QuizViewController: UIViewController {
             let resultViewController = segue.destination as! ResultViewController
             resultViewController.result = totalScore
             resultViewController.maxScore = quizs!.count
-        }
-        
-        if segue.identifier == "MainSegue" {
-            _ = segue.destination as! MainViewController
+            quizIndex = 0
+            totalScore = 0
         }
     }
 
+    @IBAction func unwindToQuizVC(segue: UIStoryboardSegue) { }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
