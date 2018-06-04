@@ -26,7 +26,7 @@ class QuizViewController: UIViewController {
     
     func updateUI() {
         navigationItem.title = "Quiz \(quizIndex + 1)"
-
+        
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(QuizViewController.cancelButtonClicked(_:)))
         navigationItem.leftBarButtonItem = cancelButton
         
@@ -53,7 +53,7 @@ class QuizViewController: UIViewController {
         performSegue(withIdentifier: "unwindToMainVC", sender: self)
     }
     
-	// Move to the next quiz
+	//Move to the next quiz
 	@IBAction func nextButtonClicked(_ sender: Any) {
         quizIndex += 1
         if quizIndex < quizs!.count {
@@ -64,6 +64,7 @@ class QuizViewController: UIViewController {
         
 	}
 	
+    //Check the chosen answer. If the answer is correct, it will turn green and the user will get 1 point otherwise it will turn red the user will get nothing.
     @IBAction func answerClicked(_ sender: UIButton?) {
         let currentQuiz = quizs![quizIndex]
         for (i, answerButton) in answerButtons!.enumerated() {
@@ -98,7 +99,7 @@ class QuizViewController: UIViewController {
 
     @IBAction func unwindToQuizVC(segue: UIStoryboardSegue) { }
     
-    // Hide the status bar
+    //Hide the status bar
     override var prefersStatusBarHidden : Bool {
         return true
     }
