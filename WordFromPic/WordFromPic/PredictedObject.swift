@@ -2,6 +2,19 @@ import Foundation
 import UIKit
 import AVFoundation
 
+let wordMap: [String: String] = [
+    "notebook, notebook computer": "Laptop",
+    "iPod": "Smartphone",
+    "mouse, computer mouse": "Mouse",
+    "laptop, laptop computer": "Laptop",
+    "ballpoint, ballpoint pen, ballpen, Biro": "Pen",
+    "cellular telephone, cellular phone, cellphone, cell, mobile": "Mobile",
+    "letter opener, paper knife, paperknife": "Paperknife",
+    "vacuum, vacuum cleaner": "Vacuum cleaner",
+    "refridgerator, icebox": "Refridgerator",
+    "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin": "Bin"
+]
+
 // Model to predict the name of the object from image
 class PredictedObject {
     static let ciContext = CIContext()
@@ -45,6 +58,11 @@ class PredictedObject {
         do {
             let prediction = try PredictedObject.inceptionv3model.prediction(image: resizedPixelBuffer)
             name = prediction.classLabel
+            if (wordMap[name!] != nil) {
+                name = wordMap[name!]
+            } else {
+                name = name?.split{$0 == ","}.map(String.init)[0]
+            }
         } catch let error {
             fatalError("Unexpected error ocurred when predicting: \(error.localizedDescription).")
         }
