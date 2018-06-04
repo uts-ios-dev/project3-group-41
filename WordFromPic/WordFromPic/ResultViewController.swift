@@ -26,6 +26,7 @@ class ResultViewController: UIViewController {
         
         resultNavigationBar.items = [navigationItem]
         
+        //Set up the result labels based on the player's score
         if result > 0 {
             congratLabel.text = "Congratulations !!!"
             resultLabel.text = "You got \(result) out of \(maxScore) scores!"
@@ -48,6 +49,11 @@ class ResultViewController: UIViewController {
             let quizViewController = segue.destination as! QuizViewController
             quizViewController.updateUI()
         }
+    }
+    
+    // Hide the status bar
+    override var prefersStatusBarHidden : Bool {
+        return true
     }
     
     override func didReceiveMemoryWarning() {

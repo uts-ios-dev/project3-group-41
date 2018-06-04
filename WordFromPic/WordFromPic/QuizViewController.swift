@@ -39,8 +39,9 @@ class QuizViewController: UIViewController {
 		
 		quizImage.image = currentQuiz.image
 		
+        //Set up the answers for the current quiz
         for (i, answerButton) in answerButtons!.enumerated() {
-            answerButton.setTitle("\(answerCharacters[i]). \(currentAnswers[i])", for: .normal)
+            answerButton.setTitle("\(answerCharacters[i]). \(currentAnswers[i].capitalizingFirstLetter())", for: .normal)
             answerButton.tintColor = UIColor.blue
             answerButton.isUserInteractionEnabled = true
             answerButton.addTarget(self, action: #selector(QuizViewController.answerClicked(_:)), for: .touchUpInside)
@@ -84,6 +85,7 @@ class QuizViewController: UIViewController {
         navigationItem.rightBarButtonItem = nextButton
     }
     
+    //Pass the player's score and total score to the result view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ResultSegue" {
             let resultViewController = segue.destination as! ResultViewController
@@ -96,8 +98,24 @@ class QuizViewController: UIViewController {
 
     @IBAction func unwindToQuizVC(segue: UIStoryboardSegue) { }
     
+    // Hide the status bar
+    override var prefersStatusBarHidden : Bool {
+        return true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 
+/*https://www.hackingwithswift.com/example-code/strings/how-to-capitalize-the-first-letter-of-a-string
+ This function return a string with the first letter capitalized*/
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}
