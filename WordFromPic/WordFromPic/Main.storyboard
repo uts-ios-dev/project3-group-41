@@ -40,12 +40,12 @@
                                     <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pht-RK-X5K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1O-Y9-B6Z">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1O-Y9-B6Z">
                                 <rect key="frame" x="16" y="698" width="89" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="V1O-Y9-B6Z" secondAttribute="height" multiplier="1:1" constant="29" id="9pL-Kj-aLe"/>
                                 </constraints>
-                                <state key="normal" title="Quiz" image="quizIcon" backgroundImage="Default.png">
+                                <state key="normal" image="quizIcon" backgroundImage="Default.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
