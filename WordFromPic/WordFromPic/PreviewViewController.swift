@@ -5,7 +5,8 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var objectName: UILabel!
     @IBOutlet weak var photo: UIImageView!
     var predictedObject: PredictedObject? = nil
-  @IBOutlet weak var soundButton: UIButton!
+    var previousRunDateTime: Date = Date()
+    @IBOutlet weak var soundButton: UIButton!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +43,12 @@ class PreviewViewController: UIViewController {
   
     // Sound button action - call object name when press
     @IBAction func soundAction(_ sender: UIButton) {
-        predictedObject?.speak()
+        let currentDateTime = Date()
+        // Button click debouncing
+        if (currentDateTime - 2 > previousRunDateTime) {
+            predictedObject?.speak()
+            previousRunDateTime = currentDateTime
+        }
     }
   
     // Function for check double tap
