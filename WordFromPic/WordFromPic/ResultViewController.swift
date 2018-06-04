@@ -31,8 +31,8 @@ class ResultViewController: UIViewController {
             congratLabel.text = "Congratulations !!!"
             resultLabel.text = "You got \(result) out of \(maxScore) scores!"
         } else {
-            congratLabel.text = "You don't have any score :("
-            resultLabel.text = "Try harder next time"
+            congratLabel.text = "Ops !!!"
+            resultLabel.text = "You got no score :("
         }
     }
     

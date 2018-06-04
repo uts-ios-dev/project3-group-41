@@ -3,7 +3,7 @@ import UIKit
 
 class Quiz {
     // default quiz in case there is no quiz in database.
-    private static let defaultQuiz: Quiz = Quiz(choices: ["cup", "car", "bottle", "people"], image: UIImage(named: "sample")!, rightAnswer: 0)
+    private static let defaultQuiz: Quiz = Quiz(choices: ["cup", "laptop", "bottle", "phone"], image: UIImage(named: "sample")!, rightAnswer: 0)
     
     // number of choices in each quizs
     static var numberOfChoices: Int {
