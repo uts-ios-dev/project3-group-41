@@ -12,7 +12,8 @@ let wordMap: [String: String] = [
     "letter opener, paper knife, paperknife": "Paperknife",
     "vacuum, vacuum cleaner": "Vacuum cleaner",
     "refridgerator, icebox": "Refridgerator",
-    "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin": "Bin"
+    "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin": "Bin",
+    "wallet, billfold, notecase, pocketbook": "Wallet"
 ]
 
 // Model to predict the name of the object from image
@@ -59,9 +60,9 @@ class PredictedObject {
             let prediction = try PredictedObject.inceptionv3model.prediction(image: resizedPixelBuffer)
             name = prediction.classLabel
             if (wordMap[name!] != nil) {
-                name = wordMap[name!]
+                name = wordMap[name!]?.capitalizingFirstLetter()
             } else {
-                name = name?.split{$0 == ","}.map(String.init)[0]
+                name = name?.split{$0 == ","}.map(String.init)[0].capitalizingFirstLetter()
             }
         } catch let error {
             fatalError("Unexpected error ocurred when predicting: \(error.localizedDescription).")
@@ -87,3 +88,6 @@ class PredictedObject {
         PredictedObject.synthesizer.speak(utterance!)
     }
 }
+
+
+
