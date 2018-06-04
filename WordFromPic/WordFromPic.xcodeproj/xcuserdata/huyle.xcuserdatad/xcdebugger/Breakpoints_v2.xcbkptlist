@@ -9,14 +9,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WordFromPic/ViewController.swift"
-            timestampString = "548067382.238236"
+            filePath = "WordFromPic/AppDelegate.swift"
+            timestampString = "549772637.976859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "8"
-            endingLineNumber = "8"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "5"
+            endingLineNumber = "5"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WordFromPic.AppDelegate.window.getter : Swift.Optional&lt;__ObjC.UIWindow&gt;"
+                  moduleName = "WordFromPic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huyle/projects/project3-group-41/WordFromPic/WordFromPic/AppDelegate.swift"
+                  timestampString = "549770437.467476"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WordFromPic.AppDelegate.window.setter : Swift.Optional&lt;__ObjC.UIWindow&gt;"
+                  moduleName = "WordFromPic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huyle/projects/project3-group-41/WordFromPic/WordFromPic/AppDelegate.swift"
+                  timestampString = "549770437.474627"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WordFromPic.AppDelegate.init() -&gt; WordFromPic.AppDelegate"
+                  moduleName = "WordFromPic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/huyle/projects/project3-group-41/WordFromPic/WordFromPic/AppDelegate.swift"
+                  timestampString = "549770437.477814"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,13 +72,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WordFromPic/PredictedObject.swift"
-            timestampString = "548067382.238308"
+            filePath = "WordFromPic/MainViewController.swift"
+            timestampString = "549771168.808635"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "predict(pixelBuffer:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

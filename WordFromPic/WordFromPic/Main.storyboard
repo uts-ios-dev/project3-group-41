@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LE5-Y8-dz6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LE5-Y8-dz6">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,6 +23,7 @@
                                 <rect key="frame" x="158" y="698" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rfd-3S-MMf" secondAttribute="height" multiplier="1:1" id="MsV-Jj-cRX"/>
                                     <constraint firstAttribute="width" constant="60" id="POO-eQ-aGJ"/>
                                     <constraint firstAttribute="height" constant="60" id="Zls-Gy-cTK"/>
                                 </constraints>
@@ -42,6 +43,9 @@
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1O-Y9-B6Z">
                                 <rect key="frame" x="16" y="698" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V1O-Y9-B6Z" secondAttribute="height" multiplier="1:1" id="9pL-Kj-aLe"/>
+                                </constraints>
                                 <state key="normal" title="Quiz" image="quizIcon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -52,7 +56,6 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Rfd-3S-MMf" firstAttribute="leading" secondItem="V1O-Y9-B6Z" secondAttribute="trailing" constant="82" id="D2k-5n-7tr"/>
                             <constraint firstItem="V1O-Y9-B6Z" firstAttribute="top" secondItem="Rfd-3S-MMf" secondAttribute="top" id="J5l-5q-rYZ"/>
                             <constraint firstItem="Rfd-3S-MMf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TZS-4T-jSQ"/>
                             <constraint firstItem="V1O-Y9-B6Z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kQU-Xk-0Fh"/>

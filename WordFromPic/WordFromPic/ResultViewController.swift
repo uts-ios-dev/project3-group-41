@@ -46,7 +46,7 @@ class ResultViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "unwindToQuizVC" {
             let quizViewController = segue.destination as! QuizViewController
-            quizViewController.viewDidLoad()
+            quizViewController.updateUI()
         }
     }
     

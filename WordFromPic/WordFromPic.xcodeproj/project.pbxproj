@@ -7,84 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20C30D2520AA70D10018C2E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D2420AA70D10018C2E8 /* AppDelegate.swift */; };
-		20C30D2A20AA70D10018C2E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C30D2820AA70D10018C2E8 /* Main.storyboard */; };
-		20C30D2C20AA70D20018C2E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C30D2B20AA70D20018C2E8 /* Assets.xcassets */; };
-		20C30D2F20AA70D20018C2E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */; };
-		20C30D3A20AA70D30018C2E8 /* WordFromPicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D3920AA70D30018C2E8 /* WordFromPicTests.swift */; };
-		20C30D4520AA70D30018C2E8 /* WordFromPicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */; };
-		2F36364720AAA764003219AA /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36364620AAA764003219AA /* PreviewViewController.swift */; };
-		2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */; };
-		2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366020AC0BDE003219AA /* PredictedObject.swift */; };
-		2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */; };
-		B2B2089520C005CC0045E287 /* quizIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B2B2089420C005CC0045E287 /* quizIcon.png */; };
-		B2B4469220BBE582004A2B63 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468D20BBE581004A2B63 /* Quiz.swift */; };
-		B2B4469320BBE582004A2B63 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468E20BBE581004A2B63 /* ResultViewController.swift */; };
-		B2B4469420BBE582004A2B63 /* SavedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4468F20BBE581004A2B63 /* SavedObject.swift */; };
-		B2B4469520BBE582004A2B63 /* Sequence+shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */; };
-		B2B4469620BBE582004A2B63 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4469120BBE581004A2B63 /* QuizViewController.swift */; };
-		B2B4469820BBE58B004A2B63 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4469720BBE58B004A2B63 /* MainViewController.swift */; };
+		20B3B84F20C4D0540085C0AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B84E20C4D0540085C0AB /* Assets.xcassets */; };
+		20B3B86820C4D0D60085C0AB /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85920C4D0D30085C0AB /* Inceptionv3.mlmodel */; };
+		20B3B86920C4D0D60085C0AB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85A20C4D0D30085C0AB /* ResultViewController.swift */; };
+		20B3B86A20C4D0D60085C0AB /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85B20C4D0D40085C0AB /* QuizViewController.swift */; };
+		20B3B86B20C4D0D60085C0AB /* SavedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85C20C4D0D40085C0AB /* SavedObject.swift */; };
+		20B3B86C20C4D0D60085C0AB /* UIImage+CVPixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85D20C4D0D40085C0AB /* UIImage+CVPixelBuffer.swift */; };
+		20B3B86D20C4D0D60085C0AB /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85E20C4D0D40085C0AB /* PreviewViewController.swift */; };
+		20B3B86E20C4D0D60085C0AB /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B85F20C4D0D40085C0AB /* Quiz.swift */; };
+		20B3B86F20C4D0D60085C0AB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B86020C4D0D50085C0AB /* MainViewController.swift */; };
+		20B3B87220C4D0D60085C0AB /* PredictedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B86520C4D0D50085C0AB /* PredictedObject.swift */; };
+		20B3B87420C4D0D60085C0AB /* Sequence+shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B86720C4D0D60085C0AB /* Sequence+shuffle.swift */; };
+		20B3B87620C4D1010085C0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B87520C4D1010085C0AB /* AppDelegate.swift */; };
+		20B3B87920C4D11A0085C0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B87720C4D1190085C0AB /* LaunchScreen.storyboard */; };
+		20B3B87A20C4D11A0085C0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B87820C4D11A0085C0AB /* Main.storyboard */; };
+		20B3B89720C4D70A0085C0AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B89620C4D70A0085C0AB /* Info.plist */; };
+		20B3B89920C4D7810085C0AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B89820C4D7810085C0AB /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		20C30D3620AA70D30018C2E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20C30D1920AA70D10018C2E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20C30D2020AA70D10018C2E8;
-			remoteInfo = WordFromPic;
-		};
-		20C30D4120AA70D30018C2E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20C30D1920AA70D10018C2E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20C30D2020AA70D10018C2E8;
-			remoteInfo = WordFromPic;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		20C30D2120AA70D10018C2E8 /* WordFromPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFromPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		20C30D2420AA70D10018C2E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20C30D2920AA70D10018C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		20C30D2B20AA70D20018C2E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../../../../Downloads/Document/UTS/Autumn 2018/iOS Programming/Assignment 3/WordFromPic/WordFromPic/Assets.xcassets"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20C30D2E20AA70D20018C2E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		20C30D3020AA70D20018C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20C30D3520AA70D30018C2E8 /* WordFromPicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordFromPicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20C30D3920AA70D30018C2E8 /* WordFromPicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFromPicTests.swift; sourceTree = "<group>"; };
-		20C30D3B20AA70D30018C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20C30D4020AA70D30018C2E8 /* WordFromPicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordFromPicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFromPicUITests.swift; sourceTree = "<group>"; };
-		20C30D4620AA70D30018C2E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F36364620AAA764003219AA /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
-		2F36366020AC0BDE003219AA /* PredictedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictedObject.swift; sourceTree = "<group>"; };
-		2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
-		B2B2089420C005CC0045E287 /* quizIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quizIcon.png; path = ../../quizIcon.png; sourceTree = "<group>"; };
-		B2B4468D20BBE581004A2B63 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
-		B2B4468E20BBE581004A2B63 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		B2B4468F20BBE581004A2B63 /* SavedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedObject.swift; sourceTree = "<group>"; };
-		B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+shuffle.swift"; sourceTree = "<group>"; };
-		B2B4469120BBE581004A2B63 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		B2B4469720BBE58B004A2B63 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		20B3B84420C4D0530085C0AB /* WordFromPic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordFromPic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20B3B84E20C4D0540085C0AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20B3B85920C4D0D30085C0AB /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		20B3B85A20C4D0D30085C0AB /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		20B3B85B20C4D0D40085C0AB /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		20B3B85C20C4D0D40085C0AB /* SavedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedObject.swift; sourceTree = "<group>"; };
+		20B3B85D20C4D0D40085C0AB /* UIImage+CVPixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+CVPixelBuffer.swift"; sourceTree = "<group>"; };
+		20B3B85E20C4D0D40085C0AB /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		20B3B85F20C4D0D40085C0AB /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		20B3B86020C4D0D50085C0AB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		20B3B86520C4D0D50085C0AB /* PredictedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictedObject.swift; sourceTree = "<group>"; };
+		20B3B86720C4D0D60085C0AB /* Sequence+shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+shuffle.swift"; sourceTree = "<group>"; };
+		20B3B87520C4D1010085C0AB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20B3B87720C4D1190085C0AB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20B3B87820C4D11A0085C0AB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		20B3B89620C4D70A0085C0AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../WordFromPic/WordFromPic/WordFromPic/Info.plist; sourceTree = "<group>"; };
+		20B3B89820C4D7810085C0AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20C30D1E20AA70D10018C2E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C30D3220AA70D30018C2E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C30D3D20AA70D30018C2E8 /* Frameworks */ = {
+		20B3B84120C4D0530085C0AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,77 +56,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20C30D1820AA70D10018C2E8 = {
+		20B3B83B20C4D0530085C0AB = {
 			isa = PBXGroup;
 			children = (
-				20C30D2320AA70D10018C2E8 /* WordFromPic */,
-				20C30D3820AA70D30018C2E8 /* WordFromPicTests */,
-				20C30D4320AA70D30018C2E8 /* WordFromPicUITests */,
-				20C30D2220AA70D10018C2E8 /* Products */,
+				20B3B89820C4D7810085C0AB /* Default-568h@2x.png */,
+				20B3B84620C4D0530085C0AB /* WordFromPic */,
+				20B3B84520C4D0530085C0AB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		20C30D2220AA70D10018C2E8 /* Products */ = {
+		20B3B84520C4D0530085C0AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20C30D2120AA70D10018C2E8 /* WordFromPic.app */,
-				20C30D3520AA70D30018C2E8 /* WordFromPicTests.xctest */,
-				20C30D4020AA70D30018C2E8 /* WordFromPicUITests.xctest */,
+				20B3B84420C4D0530085C0AB /* WordFromPic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20C30D2320AA70D10018C2E8 /* WordFromPic */ = {
+		20B3B84620C4D0530085C0AB /* WordFromPic */ = {
 			isa = PBXGroup;
 			children = (
-				20C30D2420AA70D10018C2E8 /* AppDelegate.swift */,
-				20C30D2820AA70D10018C2E8 /* Main.storyboard */,
-				20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */,
-				B2B4469720BBE58B004A2B63 /* MainViewController.swift */,
-				2F36364620AAA764003219AA /* PreviewViewController.swift */,
-				B2B4469120BBE581004A2B63 /* QuizViewController.swift */,
-				B2B4468E20BBE581004A2B63 /* ResultViewController.swift */,
-				B2B4468F20BBE581004A2B63 /* SavedObject.swift */,
-				B2B4469020BBE581004A2B63 /* Sequence+shuffle.swift */,
-				2F36366220AC0BE6003219AA /* UIImage+CVPixelBuffer.swift */,
-				B2B4468D20BBE581004A2B63 /* Quiz.swift */,
-				2F36366020AC0BDE003219AA /* PredictedObject.swift */,
-				2F36365E20AC0BD7003219AA /* Inceptionv3.mlmodel */,
-				20C30D2B20AA70D20018C2E8 /* Assets.xcassets */,
-				B2B2089420C005CC0045E287 /* quizIcon.png */,
-				20C30D3020AA70D20018C2E8 /* Info.plist */,
+				20B3B87520C4D1010085C0AB /* AppDelegate.swift */,
+				20B3B84E20C4D0540085C0AB /* Assets.xcassets */,
+				20B3B87720C4D1190085C0AB /* LaunchScreen.storyboard */,
+				20B3B87820C4D11A0085C0AB /* Main.storyboard */,
+				20B3B85920C4D0D30085C0AB /* Inceptionv3.mlmodel */,
+				20B3B86020C4D0D50085C0AB /* MainViewController.swift */,
+				20B3B86520C4D0D50085C0AB /* PredictedObject.swift */,
+				20B3B85E20C4D0D40085C0AB /* PreviewViewController.swift */,
+				20B3B85F20C4D0D40085C0AB /* Quiz.swift */,
+				20B3B85B20C4D0D40085C0AB /* QuizViewController.swift */,
+				20B3B85A20C4D0D30085C0AB /* ResultViewController.swift */,
+				20B3B85C20C4D0D40085C0AB /* SavedObject.swift */,
+				20B3B86720C4D0D60085C0AB /* Sequence+shuffle.swift */,
+				20B3B85D20C4D0D40085C0AB /* UIImage+CVPixelBuffer.swift */,
+				20B3B89620C4D70A0085C0AB /* Info.plist */,
 			);
 			path = WordFromPic;
-			sourceTree = "<group>";
-		};
-		20C30D3820AA70D30018C2E8 /* WordFromPicTests */ = {
-			isa = PBXGroup;
-			children = (
-				20C30D3920AA70D30018C2E8 /* WordFromPicTests.swift */,
-				20C30D3B20AA70D30018C2E8 /* Info.plist */,
-			);
-			path = WordFromPicTests;
-			sourceTree = "<group>";
-		};
-		20C30D4320AA70D30018C2E8 /* WordFromPicUITests */ = {
-			isa = PBXGroup;
-			children = (
-				20C30D4420AA70D30018C2E8 /* WordFromPicUITests.swift */,
-				20C30D4620AA70D30018C2E8 /* Info.plist */,
-			);
-			path = WordFromPicUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20C30D2020AA70D10018C2E8 /* WordFromPic */ = {
+		20B3B84320C4D0530085C0AB /* WordFromPic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20C30D4920AA70D30018C2E8 /* Build configuration list for PBXNativeTarget "WordFromPic" */;
+			buildConfigurationList = 20B3B85620C4D0540085C0AB /* Build configuration list for PBXNativeTarget "WordFromPic" */;
 			buildPhases = (
-				20C30D1D20AA70D10018C2E8 /* Sources */,
-				20C30D1E20AA70D10018C2E8 /* Frameworks */,
-				20C30D1F20AA70D10018C2E8 /* Resources */,
+				20B3B84020C4D0530085C0AB /* Sources */,
+				20B3B84120C4D0530085C0AB /* Frameworks */,
+				20B3B84220C4D0530085C0AB /* Resources */,
 			);
 			buildRules = (
 			);
@@ -172,69 +112,25 @@
 			);
 			name = WordFromPic;
 			productName = WordFromPic;
-			productReference = 20C30D2120AA70D10018C2E8 /* WordFromPic.app */;
+			productReference = 20B3B84420C4D0530085C0AB /* WordFromPic.app */;
 			productType = "com.apple.product-type.application";
-		};
-		20C30D3420AA70D30018C2E8 /* WordFromPicTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20C30D4C20AA70D30018C2E8 /* Build configuration list for PBXNativeTarget "WordFromPicTests" */;
-			buildPhases = (
-				20C30D3120AA70D30018C2E8 /* Sources */,
-				20C30D3220AA70D30018C2E8 /* Frameworks */,
-				20C30D3320AA70D30018C2E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				20C30D3720AA70D30018C2E8 /* PBXTargetDependency */,
-			);
-			name = WordFromPicTests;
-			productName = WordFromPicTests;
-			productReference = 20C30D3520AA70D30018C2E8 /* WordFromPicTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		20C30D3F20AA70D30018C2E8 /* WordFromPicUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20C30D4F20AA70D30018C2E8 /* Build configuration list for PBXNativeTarget "WordFromPicUITests" */;
-			buildPhases = (
-				20C30D3C20AA70D30018C2E8 /* Sources */,
-				20C30D3D20AA70D30018C2E8 /* Frameworks */,
-				20C30D3E20AA70D30018C2E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				20C30D4220AA70D30018C2E8 /* PBXTargetDependency */,
-			);
-			name = WordFromPicUITests;
-			productName = WordFromPicUITests;
-			productReference = 20C30D4020AA70D30018C2E8 /* WordFromPicUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		20C30D1920AA70D10018C2E8 /* Project object */ = {
+		20B3B83C20C4D0530085C0AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Huy Lê and Thịnh Nguyễn";
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Huy Lê";
 				TargetAttributes = {
-					20C30D2020AA70D10018C2E8 = {
-						CreatedOnToolsVersion = 9.3.1;
-					};
-					20C30D3420AA70D30018C2E8 = {
-						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = 20C30D2020AA70D10018C2E8;
-					};
-					20C30D3F20AA70D30018C2E8 = {
-						CreatedOnToolsVersion = 9.3.1;
-						TestTargetID = 20C30D2020AA70D10018C2E8;
+					20B3B84320C4D0530085C0AB = {
+						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
-			buildConfigurationList = 20C30D1C20AA70D10018C2E8 /* Build configuration list for PBXProject "WordFromPic" */;
+			buildConfigurationList = 20B3B83F20C4D0530085C0AB /* Build configuration list for PBXProject "WordFromPic" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -242,117 +138,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 20C30D1820AA70D10018C2E8;
-			productRefGroup = 20C30D2220AA70D10018C2E8 /* Products */;
+			mainGroup = 20B3B83B20C4D0530085C0AB;
+			productRefGroup = 20B3B84520C4D0530085C0AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20C30D2020AA70D10018C2E8 /* WordFromPic */,
-				20C30D3420AA70D30018C2E8 /* WordFromPicTests */,
-				20C30D3F20AA70D30018C2E8 /* WordFromPicUITests */,
+				20B3B84320C4D0530085C0AB /* WordFromPic */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		20C30D1F20AA70D10018C2E8 /* Resources */ = {
+		20B3B84220C4D0530085C0AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20C30D2F20AA70D20018C2E8 /* LaunchScreen.storyboard in Resources */,
-				B2B2089520C005CC0045E287 /* quizIcon.png in Resources */,
-				20C30D2C20AA70D20018C2E8 /* Assets.xcassets in Resources */,
-				20C30D2A20AA70D10018C2E8 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C30D3320AA70D30018C2E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C30D3E20AA70D30018C2E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				20B3B89720C4D70A0085C0AB /* Info.plist in Resources */,
+				20B3B84F20C4D0540085C0AB /* Assets.xcassets in Resources */,
+				20B3B87A20C4D11A0085C0AB /* Main.storyboard in Resources */,
+				20B3B89920C4D7810085C0AB /* Default-568h@2x.png in Resources */,
+				20B3B87920C4D11A0085C0AB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		20C30D1D20AA70D10018C2E8 /* Sources */ = {
+		20B3B84020C4D0530085C0AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F36365F20AC0BD7003219AA /* Inceptionv3.mlmodel in Sources */,
-				B2B4469820BBE58B004A2B63 /* MainViewController.swift in Sources */,
-				B2B4469620BBE582004A2B63 /* QuizViewController.swift in Sources */,
-				2F36366120AC0BDE003219AA /* PredictedObject.swift in Sources */,
-				B2B4469320BBE582004A2B63 /* ResultViewController.swift in Sources */,
-				B2B4469520BBE582004A2B63 /* Sequence+shuffle.swift in Sources */,
-				B2B4469220BBE582004A2B63 /* Quiz.swift in Sources */,
-				20C30D2520AA70D10018C2E8 /* AppDelegate.swift in Sources */,
-				2F36366320AC0BE6003219AA /* UIImage+CVPixelBuffer.swift in Sources */,
-				B2B4469420BBE582004A2B63 /* SavedObject.swift in Sources */,
-				2F36364720AAA764003219AA /* PreviewViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C30D3120AA70D30018C2E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20C30D3A20AA70D30018C2E8 /* WordFromPicTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		20C30D3C20AA70D30018C2E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20C30D4520AA70D30018C2E8 /* WordFromPicUITests.swift in Sources */,
+				20B3B86A20C4D0D60085C0AB /* QuizViewController.swift in Sources */,
+				20B3B86B20C4D0D60085C0AB /* SavedObject.swift in Sources */,
+				20B3B86820C4D0D60085C0AB /* Inceptionv3.mlmodel in Sources */,
+				20B3B86C20C4D0D60085C0AB /* UIImage+CVPixelBuffer.swift in Sources */,
+				20B3B86920C4D0D60085C0AB /* ResultViewController.swift in Sources */,
+				20B3B86D20C4D0D60085C0AB /* PreviewViewController.swift in Sources */,
+				20B3B86E20C4D0D60085C0AB /* Quiz.swift in Sources */,
+				20B3B87620C4D1010085C0AB /* AppDelegate.swift in Sources */,
+				20B3B86F20C4D0D60085C0AB /* MainViewController.swift in Sources */,
+				20B3B87420C4D0D60085C0AB /* Sequence+shuffle.swift in Sources */,
+				20B3B87220C4D0D60085C0AB /* PredictedObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		20C30D3720AA70D30018C2E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20C30D2020AA70D10018C2E8 /* WordFromPic */;
-			targetProxy = 20C30D3620AA70D30018C2E8 /* PBXContainerItemProxy */;
-		};
-		20C30D4220AA70D30018C2E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20C30D2020AA70D10018C2E8 /* WordFromPic */;
-			targetProxy = 20C30D4120AA70D30018C2E8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		20C30D2820AA70D10018C2E8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20C30D2920AA70D10018C2E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		20C30D2D20AA70D20018C2E8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20C30D2E20AA70D20018C2E8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		20C30D4720AA70D30018C2E8 /* Debug */ = {
+		20B3B85420C4D0540085C0AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -403,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -412,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		20C30D4820AA70D30018C2E8 /* Release */ = {
+		20B3B85520C4D0540085C0AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -457,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -466,166 +299,66 @@
 			};
 			name = Release;
 		};
-		20C30D4A20AA70D30018C2E8 /* Debug */ = {
+		20B3B85720C4D0540085C0AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4UQZ587P;
+				DEVELOPMENT_TEAM = NA6NBMDED8;
 				INFOPLIST_FILE = WordFromPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Group41.WordFromPic.sger;
+				PRODUCT_BUNDLE_IDENTIFIER = "Group-41.WordFromPic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		20C30D4B20AA70D30018C2E8 /* Release */ = {
+		20B3B85820C4D0540085C0AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4UQZ587P;
+				DEVELOPMENT_TEAM = NA6NBMDED8;
 				INFOPLIST_FILE = WordFromPic/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Group41.WordFromPic.sger;
+				PRODUCT_BUNDLE_IDENTIFIER = "Group-41.WordFromPic";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		20C30D4D20AA70D30018C2E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4UQZ587P;
-				INFOPLIST_FILE = WordFromPicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Group-41.WordFromPicTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordFromPic.app/WordFromPic";
-			};
-			name = Debug;
-		};
-		20C30D4E20AA70D30018C2E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4UQZ587P;
-				INFOPLIST_FILE = WordFromPicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Group-41.WordFromPicTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordFromPic.app/WordFromPic";
-			};
-			name = Release;
-		};
-		20C30D5020AA70D30018C2E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4UQZ587P;
-				INFOPLIST_FILE = WordFromPicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Group-41.WordFromPicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WordFromPic;
-			};
-			name = Debug;
-		};
-		20C30D5120AA70D30018C2E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MX4UQZ587P;
-				INFOPLIST_FILE = WordFromPicUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Group-41.WordFromPicUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WordFromPic;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20C30D1C20AA70D10018C2E8 /* Build configuration list for PBXProject "WordFromPic" */ = {
+		20B3B83F20C4D0530085C0AB /* Build configuration list for PBXProject "WordFromPic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20C30D4720AA70D30018C2E8 /* Debug */,
-				20C30D4820AA70D30018C2E8 /* Release */,
+				20B3B85420C4D0540085C0AB /* Debug */,
+				20B3B85520C4D0540085C0AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20C30D4920AA70D30018C2E8 /* Build configuration list for PBXNativeTarget "WordFromPic" */ = {
+		20B3B85620C4D0540085C0AB /* Build configuration list for PBXNativeTarget "WordFromPic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20C30D4A20AA70D30018C2E8 /* Debug */,
-				20C30D4B20AA70D30018C2E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20C30D4C20AA70D30018C2E8 /* Build configuration list for PBXNativeTarget "WordFromPicTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20C30D4D20AA70D30018C2E8 /* Debug */,
-				20C30D4E20AA70D30018C2E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20C30D4F20AA70D30018C2E8 /* Build configuration list for PBXNativeTarget "WordFromPicUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20C30D5020AA70D30018C2E8 /* Debug */,
-				20C30D5120AA70D30018C2E8 /* Release */,
+				20B3B85720C4D0540085C0AB /* Debug */,
+				20B3B85820C4D0540085C0AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 20C30D1920AA70D10018C2E8 /* Project object */;
+	rootObject = 20B3B83C20C4D0530085C0AB /* Project object */;
 }
