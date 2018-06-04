@@ -3,17 +3,17 @@ import UIKit
 import AVFoundation
 
 let wordMap: [String: String] = [
-    "notebook, notebook computer": "Laptop",
-    "iPod": "Smartphone",
-    "mouse, computer mouse": "Mouse",
-    "laptop, laptop computer": "Laptop",
-    "ballpoint, ballpoint pen, ballpen, Biro": "Pen",
-    "cellular telephone, cellular phone, cellphone, cell, mobile": "Mobile",
-    "letter opener, paper knife, paperknife": "Paperknife",
-    "vacuum, vacuum cleaner": "Vacuum cleaner",
-    "refridgerator, icebox": "Refridgerator",
-    "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin": "Bin",
-    "wallet, billfold, notecase, pocketbook": "Wallet"
+    "notebook, notebook computer": "laptop",
+    "iPod": "smartphone",
+    "mouse, computer mouse": "mouse",
+    "laptop, laptop computer": "laptop",
+    "ballpoint, ballpoint pen, ballpen, Biro": "pen",
+    "cellular telephone, cellular phone, cellphone, cell, mobile": "mobile",
+    "letter opener, paper knife, paperknife": "paperknife",
+    "vacuum, vacuum cleaner": "vacuum cleaner",
+    "refridgerator, icebox": "refridgerator",
+    "ashcan, trash can, garbage can, wastebin, ash bin, ash-bin, ashbin, dustbin, trash barrel, trash bin": "bin",
+    "wallet, billfold, notecase, pocketbook": "wallet"
 ]
 
 // Model to predict the name of the object from image
