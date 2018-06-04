@@ -21,7 +21,6 @@
 		20B3B87620C4D1010085C0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3B87520C4D1010085C0AB /* AppDelegate.swift */; };
 		20B3B87920C4D11A0085C0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B87720C4D1190085C0AB /* LaunchScreen.storyboard */; };
 		20B3B87A20C4D11A0085C0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B87820C4D11A0085C0AB /* Main.storyboard */; };
-		20B3B89720C4D70A0085C0AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B89620C4D70A0085C0AB /* Info.plist */; };
 		20B3B89920C4D7810085C0AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B3B89820C4D7810085C0AB /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -82,9 +81,9 @@
 				20B3B87820C4D11A0085C0AB /* Main.storyboard */,
 				20B3B85920C4D0D30085C0AB /* Inceptionv3.mlmodel */,
 				20B3B86020C4D0D50085C0AB /* MainViewController.swift */,
-				20B3B86520C4D0D50085C0AB /* PredictedObject.swift */,
 				20B3B85E20C4D0D40085C0AB /* PreviewViewController.swift */,
 				20B3B85F20C4D0D40085C0AB /* Quiz.swift */,
+				20B3B86520C4D0D50085C0AB /* PredictedObject.swift */,
 				20B3B85B20C4D0D40085C0AB /* QuizViewController.swift */,
 				20B3B85A20C4D0D30085C0AB /* ResultViewController.swift */,
 				20B3B85C20C4D0D40085C0AB /* SavedObject.swift */,
@@ -153,7 +152,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20B3B89720C4D70A0085C0AB /* Info.plist in Resources */,
 				20B3B84F20C4D0540085C0AB /* Assets.xcassets in Resources */,
 				20B3B87A20C4D11A0085C0AB /* Main.storyboard in Resources */,
 				20B3B89920C4D7810085C0AB /* Default-568h@2x.png in Resources */,

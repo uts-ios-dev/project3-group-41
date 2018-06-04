@@ -45,7 +45,7 @@ class PreviewViewController: UIViewController {
     @IBAction func soundAction(_ sender: UIButton) {
         let currentDateTime = Date()
         // Button click debouncing
-        if (currentDateTime - 2 > previousRunDateTime) {
+        if (currentDateTime - 3.5 > previousRunDateTime) {
             predictedObject?.speak()
             previousRunDateTime = currentDateTime
         }
